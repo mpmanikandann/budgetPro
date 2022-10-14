@@ -1,14 +1,17 @@
-name: Master branch
+name: Commit validation
 run-name: ${{github.actions}} triggered validation workflow
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - master
+  pull_request:
+    branches: [master]
+
 jobs:
   lint:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v2 
-     - uses: hadolint/hadolint-action@v2.0.0
-       with:
-        dockerfile: Dockerfile
+      - name: Checkout in progress
+        uses: actions/checkout@v2
+      - uses: hadolint/hadolint-action@v2.0.0
+        with:
+          dockerfile: Dockerfile
