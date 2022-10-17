@@ -4,8 +4,9 @@ WORKDIR /app
 
 COPY ./package.json .
 
-RUN npm install 
+RUN yarn install && \
+    yarn cache clean
 
 COPY . .
 
-CMD [ "npm" ,"dev" ]
+CMD [ "yarn" ,"start" ]
