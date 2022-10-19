@@ -1,8 +1,8 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
-import { StaticRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { renderRoutes } from "react-router-config";
+import { StaticRouter } from "react-router-dom";
 import routes from "../routes";
 
 export default (request, store) => {
@@ -14,13 +14,23 @@ export default (request, store) => {
       </StaticRouter>
     </Provider>
   );
+  return renderHtml(content);
+};
+
+const renderHtml = (content) => {
   return `
   <html>
-    <head></head>
+    <head>
+      <title>
+       Budget Pro
+      </title>
+      <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    </head>
     <body>
      <div id="root">${content}</div>
      <script src="bundle.js"></script>
     </body>
   </html>
   `;
-};
+}

@@ -9,14 +9,17 @@ import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 import { renderRoutes } from "react-router-config";
 
-const clientStore = createStore(()=>{}, applyMiddleware(thunk));
+const clientStore = createStore(() => { }, applyMiddleware(thunk));
 
+const App = () => {
+  return (
+    <Provider store={clientStore}>
+      <BrowserRouter>
+        <div>{renderRoutes(routes)}</div>
+      </BrowserRouter>
+    </Provider>)
+}
 ReactDOM.hydrate(
-  <Provider store={clientStore}>
-    <BrowserRouter>
-      <div>{renderRoutes(routes)}</div>
-    </BrowserRouter>
-  </Provider>,
-
+  <App />,
   document.getElementById("root")
 );
