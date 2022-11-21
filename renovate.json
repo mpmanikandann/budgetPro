@@ -2,19 +2,4 @@
     "extends": [
       "config:base"
     ],
-    "packageRules": [
-      {
-        "updateTypes": [
-          "minor",
-          "patch"
-        ],
-        "automerge": true
-      }
-    ],
-    "timezone": "Asia/Kolkata",
-    "schedule": [
-      "after 10pm every weekday",
-      "before 5am every weekday",
-      "every weekend"
-    ]
   }
