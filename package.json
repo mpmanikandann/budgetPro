@@ -11,6 +11,11 @@
     "lint": "eslint .",
     "lint-fix": "eslint src/* --fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint src/* --fix && git add -A ."
+     }
+  },
   "author": "manikandan <manikandan.p@kudelskisecurity.com>",
   "license": "ISC",
   "dependencies": {
@@ -46,7 +51,8 @@
   },
   "devDependencies": {
     "eslint": "^8.28.0",
-    "eslint-plugin-react": "^7.31.11"
+    "eslint-plugin-react": "^7.31.11",
+    "husky": "^8.0.2"
   },
   "repository": "https://github.com/mpmanikandann/budgetPro.git"
 }
