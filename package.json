@@ -16,7 +16,7 @@
       "pre-commit": "eslint src/* --fix && git add -A ."
      }
   },
-  "author": "manikandan <manikandan.p@kudelskisecurity.com>",
+  "author": "manikandan <mpmanikandann@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "axios": "0.16.2",
