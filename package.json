@@ -19,7 +19,7 @@
   "author": "manikandan <mpmanikandann@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "axios": "0.21.2",
+    "axios": "0.27.2",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
     "babel-loader": "7.1.5",
