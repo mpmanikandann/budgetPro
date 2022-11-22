@@ -12,11 +12,11 @@ import { renderRoutes } from "react-router-config";
 const clientStore = createStore(()=>{}, applyMiddleware(thunk));
 
 ReactDOM.hydrate(
-  <Provider store={clientStore}>
-    <BrowserRouter>
-      <div>{renderRoutes(routes)}</div>
-    </BrowserRouter>
-  </Provider>,
+	<Provider store={clientStore}>
+		<BrowserRouter>
+			<div>{renderRoutes(routes)}</div>
+		</BrowserRouter>
+	</Provider>,
 
-  document.getElementById("root")
+	document.getElementById("root")
 );

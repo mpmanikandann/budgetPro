@@ -11,10 +11,10 @@ const port = 3000;
 app.use(express.static("public"));
 
 app.get("*", (request, response) => {
-  const store = createStore(() => {}, applyMiddleware(thunk));
-  response.send(renderer(request, store));
+	const store = createStore(() => {}, applyMiddleware(thunk));
+	response.send(renderer(request, store));
 });
 
 app.listen(port, () => {
-  console.log(`Pro Budget is running in port ${port}`);
+	console.log(`Pro Budget is running in port ${port}`);
 });
