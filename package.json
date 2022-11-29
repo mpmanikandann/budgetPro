@@ -41,7 +41,7 @@
     "react-redux": "8.0.5",
     "react-router-config": "5.1.1",
     "react-router-dom": "6.4.3",
-    "redux": "3.7.2",
+    "redux": "4.2.0",
     "redux-thunk": "2.4.2",
     "serialize-javascript": "6.0.0",
     "webpack": "3.12.0",
